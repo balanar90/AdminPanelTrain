@@ -1,0 +1,12 @@
+
+
+#ABOUT ! AND ?
+! (Null Assertion Operator): Digunakan untuk memberi 
+    tahu Dart bahwa suatu variabel 
+    tidak null, meskipun jenisnya nullable.
+    Harus digunakan dengan hati-hati karena jika variabel ternyata null, 
+    akan menyebabkan runtime error.
+
+? (Null-aware Operators): Menyediakan cara yang aman untuk mengakses, 
+    menetapkan, atau menggunakan variabel nullable tanpa menyebabkan 
+    runtime error.
