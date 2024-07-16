@@ -10,3 +10,11 @@
 ? (Null-aware Operators): Menyediakan cara yang aman untuk mengakses, 
     menetapkan, atau menggunakan variabel nullable tanpa menyebabkan 
     runtime error.
+
+becarefull of writing "assets" for image ect.
+
+-Wraping the Column with "SingleChildScrollView" 
+if the menus is OverFlow the screen.and SingleChildScrollView 
+Wrap it again with widget "Drawer.
+
+- Extracting Widget make the Widget more controlable and reuseable.
