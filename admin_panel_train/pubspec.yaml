@@ -38,6 +38,8 @@ dependencies:
   flutter_svg: ^2.0.10+1
   google_fonts: ^6.2.1
   provider: ^6.1.2
+  # pie_chart: ^5.4.0
+  fl_chart: ^0.68.0
 
 dev_dependencies:
   flutter_test:

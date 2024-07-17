@@ -18,3 +18,15 @@ if the menus is OverFlow the screen.and SingleChildScrollView
 Wrap it again with widget "Drawer.
 
 - Extracting Widget make the Widget more controlable and reuseable.
+- make Widget on Start Position TOP
+ body: SafeArea(
+          child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+
+-IMPORTANT
+WHEN WATCHING TUTOR CAREFULL ABOUT TANDA KURUNG ([{}])
+
+- when creating an Widget, they actuali create sample till completed and extract it to Method as Object.
+- Make component center
+          child: Column(MainAxisAlignment:MainAxisAlignment.center,
+

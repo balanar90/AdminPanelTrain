@@ -16,7 +16,9 @@ class Header extends StatelessWidget {
           selectionColor: Colors.amber,
           style: Theme.of(context).textTheme.bodyLarge,
         ),
-        Spacer(),
+        Spacer(
+          flex: 2,
+        ),
         Expanded(
           child: SearchField(),
         ),
