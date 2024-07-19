@@ -30,3 +30,6 @@ WHEN WATCHING TUTOR CAREFULL ABOUT TANDA KURUNG ([{}])
 - Make component center
           child: Column(MainAxisAlignment:MainAxisAlignment.center,
 
+Give space beetwen component inside
+mainAxisAlignment: MainAxisAlignment.spaceBetween
+
