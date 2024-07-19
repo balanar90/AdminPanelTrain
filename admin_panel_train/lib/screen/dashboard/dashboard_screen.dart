@@ -28,7 +28,7 @@ class DashboardScreen extends StatelessWidget {
                   flex: 2,
                   child: StorageDetails(),
                 ),
-                // MyFiles()
+                MyFiles()
               ],
             )));
   }
