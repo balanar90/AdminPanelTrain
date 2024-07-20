@@ -18,13 +18,30 @@ class MyFiles extends StatelessWidget {
               style: Theme.of(context).textTheme.subtitle1,
             ),
             ElevatedButton.icon(
-                style: TextButton.styleFrom(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: defaultPadding * 1.5,
-                        vertical: defaultPadding)),
-                onPressed: () {},
-                icon: Icon(Icons.add),
-                label: Text("ADD TIME"))
+              style: TextButton.styleFrom(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: defaultPadding * 1.5,
+                      vertical: defaultPadding)),
+              onPressed: () {},
+              icon: Icon(Icons.add),
+              label: Text("ADD TIME"),
+            ),
+            SizedBox(
+              height: defaultPadding,
+            ),
+            GridView.builder(
+              itemCount: 4,
+              shrinkWrap: true,
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
+              itemBuilder: (context, index) {
+                return Container(
+                  height: 50,
+                  width: 50,
+                  color: Colors.amber,
+                );
+              },
+            ),
           ],
         )
       ],
