@@ -30,3 +30,5 @@ WHEN WATCHING TUTOR CAREFULL ABOUT TANDA KURUNG ([{}])
 - Make component center
           child: Column(MainAxisAlignment:MainAxisAlignment.center,
 
+-THERE IS WIDGET CANNOT PLACED INSIDE SOME WIDGET.
+    -so it need to Wraping by some widget exp. gridview.builder cant put INSIDE ROW need wrawping with Expanded
