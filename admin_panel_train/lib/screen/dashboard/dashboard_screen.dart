@@ -30,12 +30,13 @@ class DashboardScreen extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(flex: 5, child: MyFiles()
-                        // Container(
-                        //   height: 500,
-                        //   color: Colors.white,
-                        // ),
-                        ),
+                    Expanded(
+                      flex: 5, child: MyFiles(),
+                      // Container(
+                      //   height: 500,
+                      //   color: Colors.white,
+                      // ),
+                    ),
                     SizedBox(
                       width: defaultPadding,
                     ),

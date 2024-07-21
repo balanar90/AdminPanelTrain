@@ -1,25 +1,27 @@
+import 'package:admin_panel_train/constant.dart';
+import 'package:admin_panel_train/constant.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import '../../../constant.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-class StorageInfoDetail extends StatelessWidget {
-  const StorageInfoDetail({
+class StorageInfoCard extends StatelessWidget {
+  const StorageInfoCard({
     super.key,
     required this.title,
     required this.svgSrc,
-    required this.amountOfFiles,
-    required this.numOfFIles,
+    required this.amountOfFile,
+    required this.numOfFiles,
   });
 
-  final String title, svgSrc, amountOfFiles;
-  final int numOfFIles;
+  final String title, svgSrc, amountOfFile;
+  final int numOfFiles;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: defaultPadding),
       padding: EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
-        border: Border.all(width: 2, color: primaryColor.withOpacity(.15)),
+        border: Border.all(width: 2, color: primaryColor.withOpacity(1)),
         borderRadius: const BorderRadius.all(Radius.circular(defaultPadding)),
       ),
       child: Row(
@@ -36,20 +38,22 @@ class StorageInfoDetail extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "$numOfFIles Files",
+                    title,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  Text(amountOfFiles,
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodySmall
-                          ?.copyWith(color: Colors.white70))
+                  Text(
+                    "$numOfFiles Files",
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodySmall
+                        ?.copyWith(color: Colors.white70),
+                  ),
                 ],
               ),
             ),
           ),
-          Text(amountOfFiles)
+          Text(amountOfFile)
         ],
       ),
     );

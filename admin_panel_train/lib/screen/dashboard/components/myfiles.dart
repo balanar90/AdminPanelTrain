@@ -15,7 +15,7 @@ class MyFiles extends StatelessWidget {
           children: [
             Text(
               "My Files",
-              style: Theme.of(context).textTheme.subtitle1,
+              style: Theme.of(context).textTheme.titleSmall,
             ),
             ElevatedButton.icon(
               style: TextButton.styleFrom(
@@ -29,21 +29,22 @@ class MyFiles extends StatelessWidget {
             SizedBox(
               height: defaultPadding,
             ),
-            GridView.builder(
-              itemCount: 4,
-              shrinkWrap: true,
-              gridDelegate:
-                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
-              itemBuilder: (context, index) {
-                return Container(
-                  height: 50,
-                  width: 50,
-                  color: Colors.amber,
-                );
-              },
-            ),
           ],
-        )
+        ),
+        GridView.builder(
+          itemCount: 4,
+          shrinkWrap: true,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 4, crossAxisSpacing: defaultPadding),
+          itemBuilder: (context, index) => Container(
+            decoration: BoxDecoration(
+              color: secondaryColor,
+              borderRadius: const BorderRadius.all(
+                Radius.circular(19),
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
