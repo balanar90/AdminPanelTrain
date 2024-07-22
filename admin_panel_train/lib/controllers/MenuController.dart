@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Menucontroller extends ChangeNotifier{
+class Menu_Controller extends ChangeNotifier{
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   GlobalKey<ScaffoldState> get scaffoldKey => _scaffoldKey;
 
