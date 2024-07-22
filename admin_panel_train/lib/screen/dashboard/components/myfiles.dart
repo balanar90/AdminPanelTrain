@@ -67,6 +67,8 @@ class FileInfoCard extends StatelessWidget {
         ),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -99,6 +101,25 @@ class FileInfoCard extends StatelessWidget {
             color: info.color,
             percentage: info.percentage,
             // info: null!,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "${info.numOfFiels} Files",
+                style: Theme.of(context)
+                    .textTheme
+                    .bodySmall
+                    ?.copyWith(color: Colors.white70),
+              ),
+              Text(
+                info.totalStorage,
+                style: Theme.of(context)
+                    .textTheme
+                    .bodySmall
+                    ?.copyWith(color: Colors.white70),
+              )
+            ],
           )
         ],
       ),
