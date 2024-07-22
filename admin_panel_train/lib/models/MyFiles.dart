@@ -23,14 +23,14 @@ List demoMyFiels = [
       svgSrc: "/icons/Documents.svg",
       totalStorage: "2.9GB",
       color: primaryColor,
-      percentage: 35),
+      percentage: 55),
   CloudStorageInfo(
       tittle: "Google Drive",
       numOfFiels: 1328,
       svgSrc: "/icons/google_drive.svg",
       totalStorage: "2.9GB",
       color: Color(0xffffa113),
-      percentage: 35),
+      percentage: 11),
   CloudStorageInfo(
       tittle: "One Drive",
       numOfFiels: 1328,
