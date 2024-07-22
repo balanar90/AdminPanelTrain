@@ -20,28 +20,28 @@ List demoMyFiels = [
   CloudStorageInfo(
       tittle: "Documents",
       numOfFiels: 1328,
-      svgSrc: "assets/icons/Documents.svg",
+      svgSrc: "/icons/Documents.svg",
       totalStorage: "2.9GB",
       color: primaryColor,
       percentage: 35),
   CloudStorageInfo(
       tittle: "Google Drive",
       numOfFiels: 1328,
-      svgSrc: "assets/icons/google_drive.svg",
+      svgSrc: "/icons/google_drive.svg",
       totalStorage: "2.9GB",
       color: Color(0xffffa113),
       percentage: 35),
-        CloudStorageInfo(
+  CloudStorageInfo(
       tittle: "One Drive",
       numOfFiels: 1328,
-      svgSrc: "assets/icons/one_drive.svg",
+      svgSrc: "/icons/one_drive.svg",
       totalStorage: "1GB",
       color: Color(0xffa4cdff),
       percentage: 35),
-        CloudStorageInfo(
+  CloudStorageInfo(
       tittle: "Documents",
       numOfFiels: 5328,
-      svgSrc: "assets/icons/drop_box.svg",
+      svgSrc: "/icons/drop_box.svg",
       totalStorage: "7.3GB",
       color: Color(0xff007ee5),
       percentage: 78),
