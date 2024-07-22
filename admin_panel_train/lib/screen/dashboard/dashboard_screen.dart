@@ -1,6 +1,8 @@
 import 'package:admin_panel_train/constant.dart';
+import 'package:admin_panel_train/models/RecentFile.dart';
 import 'package:admin_panel_train/screen/dashboard/components/chart.dart';
 import 'package:admin_panel_train/screen/dashboard/components/myfiles.dart';
+import 'package:admin_panel_train/screen/dashboard/components/recent_files.dart';
 import 'package:admin_panel_train/screen/dashboard/components/storage_details.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
@@ -31,7 +33,16 @@ class DashboardScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
-                      flex: 5, child: MyFiles(),
+                      flex: 5,
+                      child: Column(
+                        children: [
+                          MyFiles(),
+                          SizedBox(
+                            height: defaultPadding,
+                          ),
+                          RecentFiles(),
+                        ],
+                      ),
                       // Container(
                       //   height: 500,
                       //   color: Colors.white,
@@ -47,8 +58,6 @@ class DashboardScreen extends StatelessWidget {
             )));
   }
 }
-
-
 
 /*
 class StorageDetail extends StatelessWidget {
