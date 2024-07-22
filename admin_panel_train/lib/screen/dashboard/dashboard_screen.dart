@@ -1,14 +1,15 @@
 import 'package:admin_panel_train/constant.dart';
-import 'package:admin_panel_train/models/RecentFile.dart';
-import 'package:admin_panel_train/screen/dashboard/components/chart.dart';
+import 'package:admin_panel_train/responsive.dart';
+// import 'package:admin_panel_train/models/RecentFile.dart';
+// import 'package:admin_panel_train/screen/dashboard/components/chart.dart';
 import 'package:admin_panel_train/screen/dashboard/components/myfiles.dart';
 import 'package:admin_panel_train/screen/dashboard/components/recent_files.dart';
 import 'package:admin_panel_train/screen/dashboard/components/storage_details.dart';
-import 'package:fl_chart/fl_chart.dart';
+// import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/svg.dart';
+// import 'package:flutter_svg/svg.dart';
 // import 'package:pie_chart/pie_chart.dart';
 
 import 'components/header.dart';
@@ -41,6 +42,12 @@ class DashboardScreen extends StatelessWidget {
                             height: defaultPadding,
                           ),
                           RecentFiles(),
+                          if (!Responsive.isMobile(context))
+                            SizedBox(
+                              height: defaultPadding,
+                            ),
+                          if (!Responsive.isMobile(context))
+                            StorageDetail()
                         ],
                       ),
                       // Container(
@@ -48,10 +55,12 @@ class DashboardScreen extends StatelessWidget {
                       //   color: Colors.white,
                       // ),
                     ),
-                    SizedBox(
-                      width: defaultPadding,
-                    ),
-                    Expanded(flex: 2, child: StorageDetail())
+                    if (!Responsive.isMobile(context))
+                      SizedBox(
+                        width: defaultPadding,
+                      ),
+                    if (!Responsive.isMobile(context))
+                      Expanded(flex: 2, child: StorageDetail())
                   ],
                 )
               ],

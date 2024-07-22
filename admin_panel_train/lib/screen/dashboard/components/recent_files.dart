@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 DataRow recentFileDataRow(Recentfile fileInfo) {
   return DataRow(cells: [
-    DataCell(
+    DataCell(onTap: (){},
       Row(
         children: [
           SvgPicture.asset(

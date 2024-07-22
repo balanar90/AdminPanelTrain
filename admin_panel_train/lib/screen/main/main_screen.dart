@@ -1,3 +1,4 @@
+import 'package:admin_panel_train/responsive.dart';
 import 'package:admin_panel_train/screen/dashboard/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -9,12 +10,12 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: SafeArea(
           child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(
+          if(Responsive.isDesktop(context)) Expanded(
             // default flex = 1
             // and it takes 1/6 part of the screen
             child: SlideMenu(),

@@ -1,4 +1,5 @@
 import 'package:admin_panel_train/constant.dart';
+import 'package:admin_panel_train/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -11,14 +12,14 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+         if(!Responsive.isMobile(context))
         Text(
           "Dashboards",
           selectionColor: Colors.amber,
           style: Theme.of(context).textTheme.bodyLarge,
         ),
-        Spacer(
-          flex: 2,
-        ),
+     if(!Responsive.isMobile(context))
+        Spacer(  flex: Responsive.isDesktop(context) ? 2 : 1,),
         Expanded(
           child: SearchField(),
         ),
