@@ -1,9 +1,10 @@
 import 'package:admin_panel_train/constant.dart';
 import 'package:admin_panel_train/screen/dashboard/dashboard_screen.dart';
+import 'package:admin_panel_train/screen/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'screen/main/main_screen.dart';
+// import 'screen/main/main_screen.dart';
 import 'controllers/MenuController.dart';
 
 void main() {
@@ -27,8 +28,13 @@ class AdminPanel extends StatelessWidget {
             textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
                 .apply(bodyColor: Colors.white),
             canvasColor: secondaryColor),
-        home: MultiProvider(providers: [ChangeNotifierProvider<Menu_Controller>(create: (context)=>Menu_Controller())],child: DashboardScreen(),)
-        );
+        home: MultiProvider(
+          providers: [
+            ChangeNotifierProvider<Menu_Controller>(
+                create: (context) => Menu_Controller())
+          ],
+          child: MainScreen(),
+        ));
   }
 }
 

@@ -19,17 +19,20 @@ class MyFiles extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            if(!Responsive.isDesktop(context))
-            IconButton(onPressed: (){}, icon: Icon(Icons.menu)),
-            Text(
-              "My Files",
-              style: Theme.of(context).textTheme.titleSmall,
-            ),
+            if (!Responsive.isDesktop(context))
+              // IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+              Text(
+                "My Files",
+                style: Theme.of(context).textTheme.titleSmall,
+              ),
             ElevatedButton.icon(
               style: TextButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: defaultPadding * 1.5,
-                      vertical: defaultPadding)),
+                padding: EdgeInsets.symmetric(
+                  horizontal: defaultPadding * 1.5,
+                  vertical:
+                      defaultPadding / (Responsive.isMobile(context) ? 2 : 1),
+                ),
+              ),
               onPressed: () {},
               icon: Icon(Icons.add),
               label: Text("ADD TIME"),
